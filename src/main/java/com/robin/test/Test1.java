@@ -1,19 +1,5 @@
 package com.robin.test;
 
-import com.google.common.base.*;
-import com.google.common.collect.Collections2;
-import com.google.common.collect.Lists;
-import com.google.common.collect.Sets;
-
-import java.security.cert.X509Certificate;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.time.Clock;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.util.*;
-
 class Shared {
     private int refcount = 0;
     private static long counter = 0;
@@ -69,7 +55,13 @@ public class Test1 {
     private static void sayHello() {
         MyInterface myInterface = (a, b) -> System.out.println("a:" + a + "b:" + b);
         myInterface.method(1, 2);
-    }
+    Player player = Player.builder().name("yaoming").team("rocket").age(23).score(1000).build();
+        System.out.println("the player is:" + player);
+        System.out.println("the player name is:" + player.getName());
+
+
+
+}
 }
 
 

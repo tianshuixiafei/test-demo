@@ -5,6 +5,7 @@ import lombok.*;
 @Getter
 @Setter
 @AllArgsConstructor
+@Builder
 @Data
 public class Player {
 
@@ -12,6 +13,5 @@ public class Player {
     private String team;
     private Integer age;
     private Integer score;
-
 
 }
