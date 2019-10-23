@@ -23,10 +23,17 @@ public class Test2 {
     }
 
     private Date wrapDistributionTime(Date distributionTime) {
+
+        new Thread(() -> {
+            System.out.println("hello world");
+        }).start();
+
         DateTime currentDistributionDateTime = new DateTime(distributionTime);
         DateTime plusOneDay = currentDistributionDateTime.plusDays(1);
         boolean isSunday = (DateTimeConstants.SUNDAY == currentDistributionDateTime.getDayOfWeek());
         return isSunday ? plusOneDay.toDate() : currentDistributionDateTime.toDate();
+
+
 
     }
 }
